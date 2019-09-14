@@ -5,10 +5,10 @@ module.exports = {
         const {category} = req.query;
 
         if(!category) {
-            res.status(200).json(swag);
+            res.status(200).send(swag);
         } else {
             const filteredSwag = swag.filter(swag => swag.category == category);
-            res.status(200).json(filteredSwag);
+            res.status(200).send(filteredSwag);
         }
     }
-}
+};
